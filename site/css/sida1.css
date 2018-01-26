@@ -1,3 +1,79 @@
 .container {
-    grid-column: span 21;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    height: 100vh;
+}
+
+header{
+    display: grid;
+    grid-column: span 11;
+    grid-row: span 5;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+    background-color: red;
+}
+
+.top{
+    display: grid;
+    grid-column: span 11;
+    grid-row: span 2;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+}
+
+.home{
+    display: grid;
+    grid-column: span 7;
+    grid-row: span 2;    
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    background-color: gray;
+    text-align: center;
+}
+
+.home > h1{
+    grid-column: span 7;
+    grid-row: span 2;
+    text-align: center;
+    margin: auto 0;
+}
+
+.login{
+    display: grid;
+    grid-column: span 4;
+    grid-row: span 2;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+    text-align: center;
+}
+
+.login > h1{
+    grid-column: span 4;
+    grid-row: span 2;
+    text-align: center;
+    margin: auto 0;
+}
+
+.search{
+    display: grid;
+    grid-column: span 11;
+    grid-row: span 3;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+}
+
+main{
+    display: grid;
+    grid-column: span 11;
+    grid-row: span 11;
+    background-color: yellowgreen; 
+}
+
+footer{
+    display: grid;
+    grid-column: span 11;
+    grid-row: span 5;
+    background-color: blue;
 }
