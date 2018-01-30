@@ -14,7 +14,7 @@ header{
     background-color: red;
 }
 
-.top{
+.top{ 
     display: grid;
     grid-column: span 11;
     grid-row: span 2;
@@ -64,11 +64,54 @@ header{
     grid-template-columns: repeat(11, 1fr);
 }
 
+.type{
+    display: grid;
+    grid-column: span 8;
+    grid-row: span 3;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+}
+
+input{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end: 9;
+    grid-row-end: 3;
+}
+
+.button{
+    display: grid;
+    grid-column: span 3;
+    grid-row: span 3;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+button{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 3;
+    grid-row-end: 3;
+}
+
 main{
     display: grid;
     grid-column: span 11;
     grid-row: span 11;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
     background-color: yellowgreen; 
+}
+
+.karta{
+    display: grid; 
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end: 11;
+    grid-row-end: 11;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    background-color: white;
 }
 
 footer{
