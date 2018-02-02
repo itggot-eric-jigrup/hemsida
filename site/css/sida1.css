@@ -130,7 +130,37 @@ main{
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(9, 1fr);
     border: solid red; 
-    background-image: url()
+}
+
+.left > .top{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column: span 7;
+    grid-row: span 7;
+} 
+img{
+    grid-column: span 7;
+    grid-row: span 7;
+    max-width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.left > .bot{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column: span 7;
+    grid-row: span 2;
+}
+
+.bot > p{
+    grid-column: span 7;
+    grid-row: span 2;
+    text-align: center;
+    margin: auto 0;
+    font-size: 40px;
 }
 
 .karta > .right{
@@ -162,8 +192,26 @@ i.hej {
 
 footer{
     display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-column: span 11;
     grid-row: span 5;
     background-color: gray;
     border: solid red;
+}
+
+.omoss{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end: 11;
+    grid-row-end: 5;
+    background-color: white;
+}
+
+.omoss > h1{
+    grid-column: span 9;
+    grid-row: span 3;
+    text-align: center;
+    margin: auto 0;
+    font-size: 40px;
 }
