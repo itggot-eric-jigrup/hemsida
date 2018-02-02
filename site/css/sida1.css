@@ -11,7 +11,8 @@ header{
     grid-row: span 5;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(11, 1fr);
-    background-color: red;
+    border: solid red;
+    background-color: white;
 }
 
 .top{ 
@@ -20,6 +21,7 @@ header{
     grid-row: span 2;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(11, 1fr);
+    border: solid red;
 }
 
 .home{
@@ -30,6 +32,7 @@ header{
     grid-template-columns: repeat(7, 1fr);
     background-color: gray;
     text-align: center;
+    border: solid red;
 }
 
 .home > h1{
@@ -47,6 +50,7 @@ header{
     grid-template-columns: repeat(4, 1fr);
     background-color: white;
     text-align: center;
+    border: solid red;
 }
 
 .login > h1{
@@ -62,6 +66,7 @@ header{
     grid-row: span 3;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(11, 1fr);
+    border: solid red;
 }
 
 .type{
@@ -77,6 +82,7 @@ input{
     grid-row-start: 2;
     grid-column-end: 9;
     grid-row-end: 3;
+    border: solid red;
 }
 
 .button{
@@ -92,6 +98,7 @@ button{
     grid-row-start: 2;
     grid-column-end: 3;
     grid-row-end: 3;
+    border: solid red;
 }
 
 main{
@@ -100,6 +107,7 @@ main{
     grid-row: span 11;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(11, 1fr);
+    border: solid red;
     background-color: yellowgreen; 
 }
 
@@ -112,11 +120,18 @@ main{
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
     background-color: white;
+    border: solid red;
+}
+
+.karta > .left{
+    grid-column: span 7;
+    grid-area: span 9; 
 }
 
 footer{
     display: grid;
     grid-column: span 11;
     grid-row: span 5;
-    background-color: blue;
+    background-color: white;
+    border: solid red;
 }
