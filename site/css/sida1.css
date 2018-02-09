@@ -11,8 +11,17 @@ header{
     grid-row: span 5;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(11, 1fr);
-    border: solid red;
     background-color: white;
+}
+
+.over {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+    grid-column: span 11;
+    grid-row: span 4;
+    background-image: url(../img/backpacker.jpg);
+    background-size: auto;
 }
 
 .top{ 
@@ -21,43 +30,71 @@ header{
     grid-row: span 2;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(11, 1fr);
-    border: solid red;
 }
 
-.home{
+.mid {
     display: grid;
-    grid-column: span 7;
-    grid-row: span 2;    
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(7, 1fr);
-    background-color: gray;
-    text-align: center;
-    border: solid red;
-}
-
-.home > h1{
-    grid-column: span 7;
+    grid-column: span 11;
     grid-row: span 2;
-    text-align: center;
-    margin: auto 0;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.login{
+.path {
     display: grid;
-    grid-column: span 4;
-    grid-row: span 2;
-    grid-template-rows: repeat(2, 1fr);
+    grid-column: span 11;
+    grid-row: span 1;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    border: solid black;
+}
+
+.crumbs {
+    display: grid;
+    grid-column: span 11;
+    grid-row: span 1;
     grid-template-columns: repeat(4, 1fr);
-    background-color: white;
-    text-align: center;
-    border: solid red;
+    grid-template-rows: repeat(1, 1fr);
 }
 
-.login > h1{
-    grid-column: span 4;
-    grid-row: span 2;
+.crumbs ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0;
+}
+
+.crumbs ul li {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.crumbs ul li a{
+    display: flex;
+    height: 100%;
     text-align: center;
-    margin: auto 0;
+}
+
+.crumbs ul li a {
+	display: block;
+	float: left;
+	height: 100%;
+	background: #3498db;
+    position: relative;
+    align-items: center;
+	margin: 0px;
+	font-size: 100%;
+	text-decoration: none;
+	color: #fff;
+}
+
+.crumbs ul li a:after {
+	content: "";  
+	border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 16px solid #3498db;
+	position: absolute; right: -16px; top: 0;
 }
 
 .search{
@@ -66,7 +103,8 @@ header{
     grid-row: span 3;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(11, 1fr);
-    border: solid red;
+    border: solid black;
+    background-color: #FF7400;
 }
 
 .type{
@@ -82,7 +120,7 @@ input{
     grid-row-start: 2;
     grid-column-end: 9;
     grid-row-end: 3;
-    border: solid red;
+    border: solid Black;
 }
 
 .button{
@@ -98,29 +136,29 @@ button{
     grid-row-start: 2;
     grid-column-end: 3;
     grid-row-end: 3;
-    border: solid red;
+    border: solid black;
 }
 
 main{
     display: grid;
     grid-column: span 11;
-    grid-row: span 11;
+    grid-row: span 14;
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(11, 1fr);
-    border: solid red;
-    background-color: yellowgreen; 
+    grid-template-rows: repeat(14, 1fr);
+    border: solid black;
+    background-color: #FF0000; 
 }
 
 .karta{
     display: grid; 
     grid-column-start: 2;
-    grid-row-start: 2;
+    grid-row-start: 5;
     grid-column-end: 11;
-    grid-row-end: 11;
+    grid-row-end: 14;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    background-color: white;
-    border: solid red;
+    background-color: #ffffff;
+    border: solid black;
 }
 
 .karta > .left{
@@ -129,7 +167,7 @@ main{
     grid-row: span 9;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    border: solid red; 
+    border: solid black; 
 }
 
 .left > .top{
@@ -139,7 +177,8 @@ main{
     grid-column: span 7;
     grid-row: span 7;
 } 
-img{
+
+.karta > img{
     grid-column: span 7;
     grid-row: span 7;
     max-width: 100%;
@@ -153,6 +192,7 @@ img{
     grid-template-rows: repeat(2, 1fr);
     grid-column: span 7;
     grid-row: span 2;
+    background-color: black;
 }
 
 .bot > p{
@@ -161,6 +201,7 @@ img{
     text-align: center;
     margin: auto 0;
     font-size: 40px;
+    color: white;
 }
 
 .karta > .right{
@@ -171,6 +212,8 @@ img{
     grid-template-rows: repeat(9, 1fr);
     background-color: gray;
 }
+
+
 
 .right > .middle{
     grid-template-columns: repeat(2, 1fr);
@@ -190,28 +233,13 @@ i.hej {
 }
 
 
+
 footer{
     display: grid;
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column: span 11;
-    grid-row: span 5;
+    grid-row: span 2;
     background-color: gray;
-    border: solid red;
-}
-
-.omoss{
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-column-end: 11;
-    grid-row-end: 5;
-    background-color: white;
-}
-
-.omoss > h1{
-    grid-column: span 9;
-    grid-row: span 3;
-    text-align: center;
-    margin: auto 0;
-    font-size: 40px;
+    border: solid black;
 }
