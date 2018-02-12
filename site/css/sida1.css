@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
@@ -20,8 +24,9 @@ header{
     grid-template-columns: repeat(11, 1fr);
     grid-column: span 11;
     grid-row: span 4;
-    background-image: url(../img/backpacker.jpg);
+    background: linear-gradient(rgba(25,25,25,0),rgba(25,25,25,1)), url(../img/backpacker.jpg);
     background-size: auto;
+    border-bottom: 2px solid rgb(51, 51, 51);
 }
 
 .top{ 
@@ -32,6 +37,16 @@ header{
     grid-template-columns: repeat(11, 1fr);
 }
 
+.top h1{
+    grid-column: span 11;
+    grid-row: span 2;
+    font-family: 'Lobster', cursive;
+    margin: auto auto;
+    color: #00EDED;
+    font-size: 50px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .mid {
     display: grid;
     grid-column: span 11;
@@ -40,13 +55,51 @@ header{
     grid-template-rows: repeat(2, 1fr);
 }
 
+.omoss{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: auto 0;
+    background-color: #00f600;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 22.4px;
+}
+
+.omoss h1{
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login{
+    grid-column-start: 7;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: auto 0;
+    background-color: #00f600;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 22.4px;
+}
+
+.login h1{
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
 .path {
     display: grid;
     grid-column: span 11;
     grid-row: span 1;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    border: solid black;
+    background-color: rgb(25, 25, 25);
 }
 
 .crumbs {
@@ -58,7 +111,7 @@ header{
 }
 
 .crumbs ul {
-    margin: 0px;
+    margin: 3px -2px 2px 2px;
     list-style: none;
     padding: 0;
 }
@@ -74,69 +127,105 @@ header{
     display: flex;
     height: 100%;
     text-align: center;
+    padding: 0 27.325px;
 }
 
 .crumbs ul li a {
 	display: block;
 	float: left;
 	height: 100%;
-	background: #3498db;
+	background: rgb(51, 51, 51);
     position: relative;
     align-items: center;
 	margin: 0px;
 	font-size: 100%;
 	text-decoration: none;
-	color: #fff;
+    color: #00f600;
+    padding: 0 27.325px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .crumbs ul li a:after {
 	content: "";  
-	border-top: 16px solid transparent;
-    border-bottom: 16px solid transparent;
-    border-left: 16px solid #3498db;
-	position: absolute; right: -16px; top: 0;
+	border-top: 13px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 13px solid rgb(51, 51, 51);
+	position: absolute; right: -13px; top: 0;
+}
+.empty{
+    display: grid;
+    grid-column: span 1;
+    grid-row: span 3;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: rgb(25, 25, 25);
+    border-top: 2px solid rgb(51, 51, 51);
+}
+
+.rightempty{
+    display: grid;
+    grid-column: span 1;
+    grid-row: span 3;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: rgb(25, 25, 25);
+    border-top: 2px solid rgb(51, 51, 51);
 }
 
 .search{
     display: grid;
-    grid-column: span 11;
+    grid-column: span 9;
     grid-row: span 3;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(11, 1fr);
-    border: solid black;
-    background-color: #FF7400;
+    grid-template-columns: repeat(10, 1fr);
+    border-top: 2px solid rgb(51, 51, 51);
+    background-color: rgb(25, 25, 25);
+    border-bottom: 2px solid rgb(51, 51, 51);
+}
+
+.search .text{
+    display: grid;
+    grid-column: span 9;
+    grid-row: span 1;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.text p{
+    grid-column: span 9;
+    grid-row: span 1;  
+    color: #00EDED;  
+    margin: auto auto;
+    font-size: auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .type{
     display: grid;
-    grid-column: span 8;
-    grid-row: span 3;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(8, 1fr);
+    grid-column: span 7;
+    grid-row: span 1;
+    margin: 0 0 0 0;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
 }
 
-input{
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-column-end: 9;
-    grid-row-end: 3;
-    border: solid Black;
+.type input{
+    grid-row: span 1;
+    grid-column: span 7;
 }
 
 .button{
     display: grid;
-    grid-column: span 3;
-    grid-row: span 3;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 2;
+    grid-row: span 1;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
 }
 
-button{
-    grid-column-start: 1;
-    grid-row-start: 2;
-    grid-column-end: 3;
-    grid-row-end: 3;
-    border: solid black;
+.button button{
+    grid-column: span 2;
+    grid-row: span 1;
+    margin: 0 0 0 0;
 }
 
 main{
@@ -145,8 +234,23 @@ main{
     grid-row: span 14;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(14, 1fr);
-    border: solid black;
-    background-color: #FF0000; 
+    background-color: rgb(25, 25, 25); 
+}
+
+.kart{
+    display: grid;
+    grid-column: span 11;
+    grid-row: span 1;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.kart p{
+    grid-column: span 11;
+    grid-row: span 1;
+    margin: auto auto;
+    color: #00EDED;
+    font-family: 'Roboto', sans-serif;
 }
 
 .karta{
@@ -158,7 +262,7 @@ main{
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
     background-color: #ffffff;
-    border: solid black;
+    border: 2px solid rgb(51, 51, 51);
 }
 
 .karta > .left{
@@ -167,7 +271,6 @@ main{
     grid-row: span 9;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    border: solid black; 
 }
 
 .left > .top{
@@ -176,14 +279,21 @@ main{
     grid-template-rows: repeat(7, 1fr);
     grid-column: span 7;
     grid-row: span 7;
+    width: 100%;
+    height: 222,367px;
+    background-image: url(../img/Chalmers.jpg);
+    background-size: 100% 100%;
 } 
 
 .karta > img{
     grid-column: span 7;
     grid-row: span 7;
-    max-width: 100%;
-    height: 100%; 
+    height: auto; 
+    width: auto; 
+    width: 100%;
+    height: auto;
     overflow: hidden;
+    background-size: cover;
 }
 
 .left > .bot{
@@ -192,7 +302,8 @@ main{
     grid-template-rows: repeat(2, 1fr);
     grid-column: span 7;
     grid-row: span 2;
-    background-color: black;
+    background-color: rgb(25, 25, 25);
+    border: 2px solid rgb(51, 51, 51);
 }
 
 .bot > p{
@@ -201,7 +312,8 @@ main{
     text-align: center;
     margin: auto 0;
     font-size: 40px;
-    color: white;
+    color: #00f600;
+    font-family: 'Roboto', sans-serif;
 }
 
 .karta > .right{
@@ -210,7 +322,8 @@ main{
     grid-row: span 9;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    background-color: gray;
+    background-color: rgb(51, 51, 51);
+    border: 2px solid rgb(51, 51, 51);
 }
 
 
@@ -230,6 +343,7 @@ i.hej {
     width: 100%;
     text-align: center;
     font-size: 60px; 
+    color: #00f600;
 }
 
 
@@ -240,6 +354,14 @@ footer{
     grid-template-rows: repeat(2, 1fr);
     grid-column: span 11;
     grid-row: span 2;
-    background-color: gray;
-    border: solid black;
+    background-color: rgb(51, 51, 51);
+    border-top: 2px solid rgb(51, 51, 51)
+}
+
+footer p{
+    color: #00f600;
+    grid-column: span 11;
+    grid-row: span 2;
+    margin: auto auto;
+    font-family: 'Roboto', sans-serif;
 }
