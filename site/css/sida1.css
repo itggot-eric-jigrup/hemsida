@@ -59,19 +59,6 @@ header {
     border-radius: 22.4px;
 }
 
- @media screen and (max-width: 420px){
-     .omoss {
-        padding: 5px;
-        font-size: 12px;
-     }
-     .crumbs ul li a:after {
-        content: "";  
-        border-top: 13px solid transparent;
-        border-bottom: 14px solid transparent;
-        border-left: 13px solid rgb(51, 51, 51);
-        position: absolute; right: -13px; top: 0;
-    }
- }
 .omoss h1{
     margin: 0;
     font-size: 20px;
@@ -232,14 +219,16 @@ nav {
     margin: 0 0 0 0;
 }
 
-main{
-    display: grid;
-    grid-column: span 11;
-    grid-row: span 14;
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(14, 1fr);
-    background-color: rgb(25, 25, 25); 
-}
+
+    main {
+       display: grid;
+   grid-column: span 11;
+   grid-row: span 14;
+   grid-template-columns: repeat(11, 1fr);
+   grid-template-rows: repeat(14, 1fr);
+   background-color: rgb(25, 25, 25); 
+    }
+
 
 .kart{
     display: grid;
@@ -392,6 +381,18 @@ i.hej {
     margin: 0;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
+    
+}
+
+.landtext > h1 > a{
+    position: relative;
+    align-items: center;
+	margin: 0px;
+	font-size: 100%;
+	text-decoration: none;
+    color: #00f600;
+    padding: auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .land2 {
@@ -524,6 +525,7 @@ i.hej {
     background-color: rgb(51, 51, 51);
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    border-bottom: 2px solid rgb(25, 25, 25);
 }
 
 .land5 > .left{
@@ -561,6 +563,7 @@ i.hej {
     background-color: rgb(51, 51, 51);
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    border-bottom: 2px solid rgb(25, 25, 25);
 }
 
 .land6 > .left{
@@ -676,4 +679,126 @@ footer p{
     grid-row: span 2;
     margin: auto auto;
     font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (min-device-width: 400px){
+    main {
+       display: grid;
+   grid-column: span 11;
+   grid-row: span 14;
+   grid-template-columns: repeat(11, 1fr);
+   grid-template-rows: repeat(14, 1fr);
+   background-color: hotpink; 
+    }
+    .empty{
+        display: grid;
+        grid-column: span 3;
+        grid-row: span 3;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        background-color: rgb(25, 25, 25);
+        border-top: 2px solid rgb(51, 51, 51);
+    }
+    
+    .rightempty{
+        display: grid;
+        grid-column: span 3;
+        grid-row: span 3;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        background-color: rgb(25, 25, 25);
+        border-top: 2px solid rgb(51, 51, 51);
+    }
+    
+    .sidasearch{
+        display: grid;
+        grid-column: span 5;
+        grid-row: span 3;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        border-top: 2px solid rgb(51, 51, 51);
+        background-color: rgb(25, 25, 25);
+        border-bottom: 2px solid rgb(51, 51, 51);
+    }
+    
+    .sidasearch .text{
+        display: grid;
+        grid-column: span 5;
+        grid-row: span 1;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    
+    .text p{
+        grid-column: span 5;
+        grid-row: span 1;  
+        color: #00EDED;  
+        margin: auto auto;
+        font-size: auto;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .type{
+        display: grid;
+        grid-column: span 4;
+        grid-row: span 1;
+        margin: 0 0 0 0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    
+    .type input{
+        grid-row: span 1;
+        grid-column: span 4;
+    }
+    
+    .button{
+        display: grid;
+        grid-column: span 1;
+        grid-row: span 1;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    .button button{
+        grid-column: span 1;
+        grid-row: span 1;
+        margin: 0 0 0 0;
+    }
+    .omoss{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin: auto 0;
+        background-color: #00f600;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+        border-radius: 22.4px;
+    }
+    
+    .omoss h1{
+        margin: 0;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .login{
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin: auto 0;
+        background-color: #00f600;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+        border-radius: 22.4px;
+    }
+    
+    .login h1{
+        margin: 0;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
 }
