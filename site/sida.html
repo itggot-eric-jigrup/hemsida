@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/sida1.css"> 
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -11,15 +12,24 @@
 </head>
 <body>
     <div class="container">
+            <div class="menu">
+                    <i class="material-icons" onclick="toggleMenu()">close</i>
+                    <ul>
+                        <li>Om Oss</li>
+                        <li>Login</li>
+                        <li>Kontaktinformation</li>
+                    </ul>
+                </div>
         <header>
-                <div class="top">
+            <img src="img/Backpaker.jpg" alt="could not show">
+                <div class="wraper-topside-header">
                     <h1>Resesida</h1>
                 </div>
-                <div class="mid">
-                    <div class="omoss">
+                <div class="wraper-botom-header">
+                    <div class="link-omoss">
                         <h1>Om Oss</h1>
                     </div>
-                    <div class="login">
+                    <div class="link-login">
                         <h1>Login</h1>
                     </div>
                 </div> 
@@ -32,8 +42,10 @@
             </div>
         </nav>
         <main>
-            <section class="empty"></section>
-            <section class="sidasearch">
+            <section class="empty-space-left">
+                <i class="material-icons" onclick="toggleMenu()">menu</i>
+            </section>
+            <section class="sida-search">
                 <div class="text">
                     <p>Sök land eller stad</p>
                 </div>
@@ -44,20 +56,20 @@
                     <a href="land.html"><button>sök</button></a>
                 </div>  
             </section>
-            <div class="rightempty"></div>
-            <div class="kart">
+            <div class="empty-space-right"></div>
+            <div class="text-kartlänk">
                 <p>Karta för närligande platser</p>
             </div>
-            <div class="karta">
-                <div class="left">
-                    <div class="top">
+            <div class="Wraper-länk-karta">
+                <div class="leftside-länk-karta">
+                    <div class="image-länk-karta">
                         
                     </div>
-                    <div class="bot">
+                    <div class="namn-länk-karta">
                         <p>Chalmers</p>
                     </div>
                 </div>
-                <div class="right">
+                <div class="rightside-länk-karta">
                     <div class="middle">
                         <i class="material-icons hej">keyboard_arrow_right</i>
                     </div>
@@ -68,5 +80,6 @@
             <p>contact: eric.jigrup@gmail.se</p>
         </footer>
     </div>
+    <script src="js/menu.js"></script>
 </body>
 </html>

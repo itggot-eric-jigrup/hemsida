@@ -15,12 +15,19 @@ header {
     grid-template-columns: repeat(11, 1fr);
     grid-column: span 11;
     grid-row: span 4;
-    background: linear-gradient(rgba(25,25,25,0),rgba(25,25,25,1)), url(../img/backpacker.jpg);
-    background-size: auto;
+    background: white;
     border-bottom: 2px solid rgb(51, 51, 51);
 }
 
-.top{ 
+header img{
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+    grid-column: span 11;
+    grid-row: span 4;
+    border-bottom: 2px solid rgb(51, 51, 51);
+}
+
+ .wraper-topside-header{ 
     display: grid;
     grid-column: span 11;
     grid-row: span 2;
@@ -28,7 +35,7 @@ header {
     grid-template-columns: repeat(11, 1fr);
 }
 
-.top h1{
+.wraper-topside-header h1{
     grid-column: span 11;
     grid-row: span 2;
     font-family: 'Lobster', cursive;
@@ -38,7 +45,7 @@ header {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.mid {
+.wraper-botom-header {
     display: grid;
     grid-column: span 11;
     grid-row: span 2;
@@ -46,7 +53,7 @@ header {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.omoss{
+.link-omoss{
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 1;
@@ -59,13 +66,13 @@ header {
     border-radius: 22.4px;
 }
 
-.omoss h1{
+.link-omoss h1{
     margin: 0;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
-.login{
+.link-login{
     grid-column-start: 7;
     grid-column-end: 11;
     grid-row-start: 1;
@@ -78,7 +85,7 @@ header {
     border-radius: 22.4px;
 }
 
-.login h1{
+.link-login h1{
     margin: 0;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
@@ -99,6 +106,7 @@ nav {
     grid-row: span 1;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    border-top: 2px solid rgb(51, 51, 51);
 }
 
 .crumbs ul {
@@ -143,7 +151,7 @@ nav {
     border-left: 13px solid rgb(51, 51, 51);
 	position: absolute; right: -13px; top: 0;
 }
-.empty{
+.empty-space-left{
     display: grid;
     grid-column: span 1;
     grid-row: span 3;
@@ -153,7 +161,22 @@ nav {
     border-top: 2px solid rgb(51, 51, 51);
 }
 
-.rightempty{
+.menu i.material-icons{    
+    font-size: 3em;
+}
+
+.menu{
+    width: 0vw;
+    height: 0vh;
+    position: absolute;
+    display: none;
+}
+
+.show{
+    display: none;
+}
+
+.empty-space-right{
     display: grid;
     grid-column: span 1;
     grid-row: span 3;
@@ -163,18 +186,18 @@ nav {
     border-top: 2px solid rgb(51, 51, 51);
 }
 
-.sidasearch{
+.sida-search{
     display: grid;
     grid-column: span 9;
     grid-row: span 3;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     border-top: 2px solid rgb(51, 51, 51);
     background-color: rgb(25, 25, 25);
     border-bottom: 2px solid rgb(51, 51, 51);
 }
 
-.sidasearch .text{
+.sida-search .text{
     display: grid;
     grid-column: span 9;
     grid-row: span 1;
@@ -227,10 +250,11 @@ nav {
    grid-template-columns: repeat(11, 1fr);
    grid-template-rows: repeat(14, 1fr);
    background-color: rgb(25, 25, 25); 
+   border-top: 2px solid rgb(51, 51, 51);
     }
 
 
-.kart{
+.text-kartlänk{
     display: grid;
     grid-column: span 11;
     grid-row: span 1;
@@ -238,7 +262,7 @@ nav {
     grid-template-rows: repeat(1, 1fr);
 }
 
-.kart p{
+.text-kartlänk p{
     grid-column: span 11;
     grid-row: span 1;
     margin: auto auto;
@@ -246,7 +270,7 @@ nav {
     font-family: 'Roboto', sans-serif;
 }
 
-.karta{
+.Wraper-länk-karta{
     display: grid; 
     grid-column-start: 2;
     grid-row-start: 5;
@@ -258,7 +282,7 @@ nav {
     border: 2px solid rgb(51, 51, 51);
 }
 
-.karta > .left{
+.Wraper-länk-karta > .leftside-länk-karta{
     display: grid;
     grid-column: span 7;
     grid-row: span 9;
@@ -266,7 +290,7 @@ nav {
     grid-template-rows: repeat(9, 1fr);
 }
 
-.left > .top{
+.leftside-länk-karta > .image-länk-karta{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -278,7 +302,7 @@ nav {
     background-size: 100% 100%;
 } 
 
-.karta > img{
+.Wraper-länk-karta > img{
     grid-column: span 7;
     grid-row: span 7;
     height: auto; 
@@ -289,7 +313,7 @@ nav {
     background-size: cover;
 }
 
-.left > .bot{
+.leftside-länk-karta > .namn-länk-karta{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -299,7 +323,7 @@ nav {
     border: 2px solid rgb(51, 51, 51);
 }
 
-.bot > p{
+.namn-länk-karta > p{
     grid-column: span 7;
     grid-row: span 2;
     text-align: center;
@@ -309,7 +333,7 @@ nav {
     font-family: 'Roboto', sans-serif;
 }
 
-.karta > .right{
+.Wraper-länk-karta > .rightside-länk-karta{
     display: grid;
     grid-column: span 2;
     grid-row: span 9;
@@ -321,7 +345,7 @@ nav {
 
 
 
-.right > .middle{
+.rightside-länk-karta > .middle{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-start: 1;
@@ -351,7 +375,7 @@ i.hej {
     border-top: 2px solid rgb(25, 25, 25);
 }
 
-.land1 > .left{
+.land1 > .leftside{
     display: grid;
     grid-column: span 3;
     grid-row: span 4;
@@ -359,7 +383,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.land1 > .left > .img{
+.land1 > .leftside > .img{
     display: grid;
     grid-column: span 3;
     grid-row: span 3;
@@ -369,7 +393,7 @@ i.hej {
     background-size: auto;
 }
 
-.land1 > .left > .landtext{
+.land1 > .leftside > .landtext{
     display: grid;
     grid-column: span 3;
     grid-row: span 1;
@@ -407,7 +431,7 @@ i.hej {
     border-top: 2px solid rgb(25, 25, 25);
 }
 
-.land2 > .left{
+.land2 > .leftside{
     display: grid;
     grid-column: span 3;
     grid-row: span 4;
@@ -415,7 +439,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.land2 > .left > .img{
+.land2 > .leftside > .img{
     display: grid;
     grid-column: span 3;
     grid-row: span 3;
@@ -425,7 +449,7 @@ i.hej {
     background-size: auto;
 }
 
-.land2 > .left > .landtext{
+.land2 > .leftside > .landtext{
     display: grid;
     grid-column: span 3;
     grid-row: span 1;
@@ -453,7 +477,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.land3 > .left{
+.land3 > .leftside{
     display: grid;
     grid-column: span 3;
     grid-row: span 4;
@@ -461,7 +485,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.land3 > .left > .img{
+.land3 > .leftside > .img{
     display: grid;
     grid-column: span 3;
     grid-row: span 3;
@@ -471,7 +495,7 @@ i.hej {
     background-size: auto;
 }
 
-.land3 > .left > .landtext{
+.land3 > .leftside > .landtext{
     display: grid;
     grid-column: span 3;
     grid-row: span 1;
@@ -490,7 +514,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.land4 > .left{
+.land4 > .leftside{
     display: grid;
     grid-column: span 3;
     grid-row: span 4;
@@ -498,7 +522,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.land4 > .left > .img{
+.land4 > .leftside > .img{
     display: grid;
     grid-column: span 3;
     grid-row: span 3;
@@ -508,7 +532,7 @@ i.hej {
     background-size: auto;
 }
 
-.land4 > .left > .landtext{
+.land4 > .leftside > .landtext{
     display: grid;
     grid-column: span 3;
     grid-row: span 1;
@@ -528,7 +552,7 @@ i.hej {
     border-bottom: 2px solid rgb(25, 25, 25);
 }
 
-.land5 > .left{
+.land5 > .leftside{
     display: grid;
     grid-column: span 3;
     grid-row: span 4;
@@ -536,7 +560,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.land5 > .left > .img{
+.land5 > .leftside > .img{
     display: grid;
     grid-column: span 3;
     grid-row: span 3;
@@ -546,7 +570,7 @@ i.hej {
     background-size: auto;
 }
 
-.land5 > .left > .landtext{
+.land5 > .leftside > .landtext{
     display: grid;
     grid-column: span 3;
     grid-row: span 1;
@@ -566,7 +590,7 @@ i.hej {
     border-bottom: 2px solid rgb(25, 25, 25);
 }
 
-.land6 > .left{
+.land6 > .leftside{
     display: grid;
     grid-column: span 3;
     grid-row: span 4;
@@ -574,7 +598,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.land6 > .left > .img{
+.land6 > .leftside > .img{
     display: grid;
     grid-column: span 3;
     grid-row: span 3;
@@ -584,7 +608,7 @@ i.hej {
     background-size: auto;
 }
 
-.land6 > .left > .landtext{
+.land6 > .leftside > .landtext{
     display: grid;
     grid-column: span 3;
     grid-row: span 1;
@@ -592,7 +616,7 @@ i.hej {
     grid-template-rows: repeat(1, 1fr);
 }
 
-.transsearch {
+.komplet-vald-search {
     display: grid;
     grid-column-start: 2;
     grid-row-start: 2;
@@ -603,7 +627,7 @@ i.hej {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.transsearch > .img {
+.komplet-vald-search > .img {
     display: grid;
     grid-column: span 3;
     grid-row: span 3;
@@ -611,7 +635,7 @@ i.hej {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.transsearch > .sökta{
+.komplet-vald-search > .tidigare-sökta{
     display: grid;
     grid-column: span 6;
     grid-row: span 3;
@@ -619,7 +643,7 @@ i.hej {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.tåg {
+.transport-tåg-wraper{
     display: grid;
     grid-column-start: 2;
     grid-row-start: 6;
@@ -630,7 +654,7 @@ i.hej {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.plan {
+.transport-plan-wraper {
     display: grid;
     grid-column-start: 7;
     grid-row-start: 6;
@@ -641,7 +665,7 @@ i.hej {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.buss {
+.transport-buss-wraper {
     display: grid;
     grid-column-start: 2;
     grid-row-start: 11;
@@ -652,7 +676,7 @@ i.hej {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.eget {
+.transport-eget-wraper {
     display: grid;
     grid-column-start: 7;
     grid-row-start: 11;
@@ -688,9 +712,9 @@ footer p{
    grid-row: span 14;
    grid-template-columns: repeat(11, 1fr);
    grid-template-rows: repeat(14, 1fr);
-   background-color: hotpink; 
+   background-color: rgb(25, 25, 25);
     }
-    .empty{
+    .empty-space-left{
         display: grid;
         grid-column: span 3;
         grid-row: span 3;
@@ -700,7 +724,7 @@ footer p{
         border-top: 2px solid rgb(51, 51, 51);
     }
     
-    .rightempty{
+    .empty-space-right{
         display: grid;
         grid-column: span 3;
         grid-row: span 3;
@@ -710,7 +734,7 @@ footer p{
         border-top: 2px solid rgb(51, 51, 51);
     }
     
-    .sidasearch{
+    .sida-search{
         display: grid;
         grid-column: span 5;
         grid-row: span 3;
@@ -721,7 +745,7 @@ footer p{
         border-bottom: 2px solid rgb(51, 51, 51);
     }
     
-    .sidasearch .text{
+    .sida-search .text{
         display: grid;
         grid-column: span 5;
         grid-row: span 1;
@@ -764,41 +788,44 @@ footer p{
         grid-row: span 1;
         margin: 0 0 0 0;
     }
-    .omoss{
-        grid-column-start: 7;
-        grid-column-end: 11;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        margin: auto 0;
-        background-color: #00f600;
-        text-align: center;
-        vertical-align: middle;
-        padding: 10px;
-        border-radius: 22.4px;
+    .link-omoss{
+        display: none;
     }
     
-    .omoss h1{
-        margin: 0;
-        font-size: 20px;
-        font-family: 'Roboto', sans-serif;
+    .link-omoss h1{
+        display: none;
     }
     
-    .login{
-        grid-column-start: 2;
-        grid-column-end: 6;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        margin: auto 0;
-        background-color: #00f600;
-        text-align: center;
-        vertical-align: middle;
-        padding: 10px;
-        border-radius: 22.4px;
+    .link-login{
+        display: none;
     }
     
-    .login h1{
-        margin: 0;
-        font-size: 20px;
-        font-family: 'Roboto', sans-serif;
+    .link-login h1{
+        display: none;
+    }
+
+    main i.material-icons{
+        font-size: 3em;
+        color: #00f600;
+    }
+    
+    .menu i.material-icons{    
+        font-size: 3em;
+    }
+    
+    .menu{
+        width: 80vw;
+        height: 100vh;
+        position: absolute;
+        background: white;
+        display: none;
+        z-index: 10;
+    }
+    
+    .show{
+        display: block;
+    }
+    .fade{
+        background-color: rgb(100,100,100)
     }
 }
