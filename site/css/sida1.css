@@ -15,7 +15,7 @@ header {
     grid-template-columns: repeat(11, 1fr);
     grid-column: span 11;
     grid-row: span 4;
-    background: white;
+    background: rgb(25, 25, 25);
     border-bottom: 2px solid rgb(51, 51, 51);
 }
 
@@ -25,6 +25,7 @@ header img{
     grid-column: span 11;
     grid-row: span 4;
     border-bottom: 2px solid rgb(51, 51, 51);
+    margin: 0 auto;
 }
 
  .wraper-topside-header{ 
